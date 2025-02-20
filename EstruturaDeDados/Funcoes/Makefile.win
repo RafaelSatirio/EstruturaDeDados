@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = PrincipalFuncoes.o
-LINKOBJ  = PrincipalFuncoes.o
+OBJ      = PrincipalFuncoes.o Inc.o SomaVetor.o
+LINKOBJ  = PrincipalFuncoes.o Inc.o SomaVetor.o
 LIBS     = -L"C:/Softwares/Dev-Cpp-Portable/MinGW64/lib" -L"C:/Softwares/Dev-Cpp-Portable/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/include" -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/x86_64-w64-mingw32/include" -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/include" -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/x86_64-w64-mingw32/include" -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Softwares/Dev-Cpp-Portable/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -26,3 +26,9 @@ $(BIN): $(OBJ)
 
 PrincipalFuncoes.o: PrincipalFuncoes.c
 	$(CC) -c PrincipalFuncoes.c -o PrincipalFuncoes.o $(CFLAGS)
+
+Inc.o: Inc.c
+	$(CC) -c Inc.c -o Inc.o $(CFLAGS)
+
+SomaVetor.o: SomaVetor.c
+	$(CC) -c SomaVetor.c -o SomaVetor.o $(CFLAGS)
